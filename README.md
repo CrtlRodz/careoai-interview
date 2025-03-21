@@ -70,9 +70,9 @@ Built with **React (CRA)** and styled using **pure CSS**, this project avoids ex
 
 ---
 
-## 🛠 Getting Started
+## Getting Started
 
-### ✅ Prerequisites
+### Prerequisites
 
 - [Node.js](https://nodejs.org/) (v14+)
 - [npm](https://www.npmjs.com/) (v6+)
