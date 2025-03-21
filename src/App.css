@@ -1,38 +1,116 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+/* Define custom properties for reusable values */
+:root {
+  --font-family: "Manrope", sans-serif;
+  --primary-bg: #F8F9FA;
+  --app-bg: #F8F8F8;
+  --heading-color: #0F172A;
+  --count-bg: #fbfffd;
+  --count-border: #27A376;
+  --count-color: #27A376;
+  --plus-icon-color: #030303;
+  --plus-icon-hover-bg: #27A376;
+  --plus-icon-hover-color: #fff;
+  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  background-color: var(--primary-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
+}
+
+.app-container {
+  width: 294px;
+  height: 739px;
+  background-color: var(--app-bg);
+  border-radius: 15px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
+  gap: 21px;
+  box-shadow: var(--card-shadow);
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 160%;
+  letter-spacing: 0.2px;
+  padding-bottom: 8px;
+  color: var(--heading-color);
+}
+
+.heading-text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+.count {
+  background-color: var(--count-bg);
+  border: 1.5px solid var(--count-border);
+  color: var(--count-color);
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 6px;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-width: 20px;
+  height: 20px;
+  gap: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.plus-icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--plus-icon-color);
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.plus-icon:hover {
+  background-color: var(--plus-icon-hover-bg);
+  color: var(--plus-icon-hover-color);
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+}
+
+@media (max-width: 400px) {
+  .app-container {
+    width: 90%;
+    height: auto;
+    max-height: 90vh;
   }
-  to {
-    transform: rotate(360deg);
+
+  .card-list {
+    max-height: 100%;
   }
 }
