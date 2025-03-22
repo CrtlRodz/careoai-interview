@@ -7,16 +7,6 @@ type CardProps = {
   user: User;
 };
 
-/**
- * Card.tsx
- *
- * This component renders a card that displays user details including an optional image,
- * the user's name, position, and icons with counts for messages and attachments.
- * It also includes a menu icon on the right side.
- *
- * The component receives a `user` object as a prop which adheres to the CardProps type.
- * It uses destructuring to extract the properties from the user object.
- */
 
 const Card: React.FC<CardProps> = ({ user }) => {
   const { name, position, image, message, attachments } = user;

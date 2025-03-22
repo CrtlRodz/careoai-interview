@@ -1,20 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
-/* Define custom properties for reusable values */
-:root {
-  --font-family: "Manrope", sans-serif;
-  --primary-bg: #F8F9FA;
-  --app-bg: #F8F8F8;
-  --heading-color: #0F172A;
-  --count-bg: #fbfffd;
-  --count-border: #27A376;
-  --count-color: #27A376;
-  --plus-icon-color: #030303;
-  --plus-icon-hover-bg: #27A376;
-  --plus-icon-hover-color: #fff;
-  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
 * {
   box-sizing: border-box;
 }
@@ -22,8 +7,8 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: var(--font-family);
-  background-color: var(--primary-bg);
+  font-family: "Manrope", sans-serif;
+  background-color: #F8F9FA;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,13 +18,13 @@ body {
 .app-container {
   width: 294px;
   height: 739px;
-  background-color: var(--app-bg);
+  background-color: #F8F8F8;
   border-radius: 15px;
   padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 21px;
-  box-shadow: var(--card-shadow);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .heading {
@@ -51,7 +36,7 @@ body {
   line-height: 160%;
   letter-spacing: 0.2px;
   padding-bottom: 8px;
-  color: var(--heading-color);
+  color: #0F172A;
 }
 
 .heading-text {
@@ -60,13 +45,13 @@ body {
   gap: 10px;
   font-size: 14px;
   font-weight: 700;
-  color: var(--heading-color);
+  color: #0F172A;
 }
 
 .count {
-  background-color: var(--count-bg);
-  border: 1.5px solid var(--count-border);
-  color: var(--count-color);
+  background-color: #fbfffd;
+  border: 1.5px solid #27A376;
+  color: #27A376;
   font-size: 12px;
   font-weight: 600;
   border-radius: 6px;
@@ -84,7 +69,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--plus-icon-color);
+  color: #030303;
   font-size: 20px;
   font-weight: bold;
   cursor: pointer;
@@ -92,8 +77,8 @@ body {
 }
 
 .plus-icon:hover {
-  background-color: var(--plus-icon-hover-bg);
-  color: var(--plus-icon-hover-color);
+  background-color: #27A376;
+  color: #fff;
 }
 
 .card-list {
@@ -103,14 +88,11 @@ body {
   overflow-y: auto;
 }
 
-@media (max-width: 400px) {
-  .app-container {
-    width: 90%;
-    height: auto;
-    max-height: 90vh;
-  }
-
+@media (min-width: 600px) {
   .card-list {
-    max-height: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    overflow-y: visible;
   }
 }
